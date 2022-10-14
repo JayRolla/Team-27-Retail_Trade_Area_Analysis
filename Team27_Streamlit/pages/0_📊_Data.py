@@ -9,14 +9,18 @@ st.set_page_config(
     page_icon= "📊",
 )
 
-st.sidebar.title("Data and EDA")
+st.header("Interact with the Datasets and the Visuals 📊")
+
+st.sidebar.header("Data and EDA")
 st.sidebar.write("The data used for the Trade Area Analysis is derived from South African 2011 census. The data constitutes of two dataframes. The first dataframe has the population data, while the second dataframe has the household data ")
-st.sidebar.title("Data Insights")
+st.sidebar.header("Data Insights")
 st.sidebar.write("The census data used for determining the viable trade area for Molapo Stores include the population distribution per ward and the average household income per ward")
 
 #Importing the dataframes
 pop= pd.read_csv("capetown_population.csv")
 hhs= pd.read_csv("capetown_households.csv")
+
+st.subheader("1. The Datasets")
 
 tab1, tab2 = st.tabs(["Population Data", "Households Data"])
 
@@ -30,8 +34,14 @@ with tab2:
     container2.write("This is Households Data for wards in Cape Town fron 2011 Census")
     container2.dataframe(hhs)
 
+st.write("")
+
 ward_option= pop['Ward'].unique().tolist()
 ward= st.selectbox("Select a Ward to review", ward_option,0)
+
+st.write("")
+
+st.subheader("2. The Visuals")
 
 tab3, tab4, tab5, tab6, tab7 = st.tabs(["Pop Distribution", "Tenure Status", "Household Size", "Average HH Income", "Employment Staus"])
 
