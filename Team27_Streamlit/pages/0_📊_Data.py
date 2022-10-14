@@ -62,7 +62,7 @@ with tab3:
 with tab4:
     hhs=hhs[hhs["Ward"]== ward]
     container=st.container()
-    container.write("Tenure Status")
+    container.write(f"Tenure Status in Ward {ward}")
     data = hhs[['Rented','Owned_but_','Occupied_r','Owned_and_','Other1']].sum()
     my_labels = "Rented","Owned but not paid off","Occupied Rent Free","Owned and fully paid","Other"
     fig4= plt.figure()
@@ -73,7 +73,7 @@ with tab4:
 
 with tab5:
     container=st.container()
-    container.write("Households Size distribution across wards")
+    container.write(f"Households Size distribution in Ward {ward}")
     data2 = hhs[['HH_Size_1','HH_Size_2','HH_Size_3','HH_Size_4','HH_Size_5','HH_Size_6','HH_Size_7','HH_Size_8','HH_Size_9','HH_Size_10']].sum()
     my_labels2 = 'HH_Size_1','HH_Size_2','HH_Size_3','HH_Size_4','HH_Size_5','HH_Size_6','HH_Size_7','HH_Size_8','HH_Size_9','HH_Size_10'
     y_pos = np.arange(len(my_labels2))
@@ -85,7 +85,7 @@ with tab5:
     st.pyplot(fig5)
 with tab6:
     container=st.container()
-    container.write("Average household income")
+    container.write(f"Average household income in Ward {ward}")
     data3 = hhs[['AHHI_No_in','AHHI_R_1__','AHHI_R_480','AHHI_R_960','AHHI_R_19_','AHHI_R_38_','AHHI_R_76_','AHHI_R_153','AHHI_R_307','AHHI_R_614','AHHI_R_1_2','AHHI_R_2_4','AHHI_Unspe']].sum()
     my_labels3 = 'No income','R1-R4,800','R4,801-R9,600','R9,601-R19,600','R19,601-R38,200','R38,201-R76,400','R76,401-R153,800','R153,801-R307,600','R307,601-R614,400','R614,401-1,228,800','R1,228,801-R2,457,600','R2,457,601+','Unspecified'
     y_pos1 = np.arange(len(my_labels3))
@@ -97,7 +97,7 @@ with tab6:
     st.pyplot(fig6)
 with tab7:
     container=st.container()
-    container.write("Employment Status")
+    container.write(f"Employment Status in Ward {ward}")
     data4 = pop[['Employed','Unemployed','Discourage','Other_NotE']].sum()
     my_labels4 = "Employed", "Unemployed", "Discouraged Work Seeker", "Not Economically Active"
     fig7= plt.figure()
