@@ -18,11 +18,10 @@ tab1,tab2,tab3 = st.tabs(['Project Overview', 'Business Value', 'The Process'])
 
 with tab1:
     st.subheader("Project Overview")
-    st.write("Malapo Store wants to explore the viability of setting up a retail outlet in Cape Town.")
-    st.write("Trade Area Analysis tool offers insight to Molapo Store on the viability of opening a retail outlet in different locations within Cape Town.")
+    st.write("Trade Area Analysis explores the viability of setting up a retail outlet in a location of interest. For this project, the location of interest is Cape Town")
+    st.write("The project offers insight on the viability of opening a retail outlet in different locations within Cape Town.")
 
     image = Image.open('capetown_.png')
-    #st.image(image, caption='A display of population distribution across Wards in Cape Town', width=None)
     st.image(image, caption='An Aerial View of Cape Town Business District', width=None)
 
 with tab2:
@@ -35,4 +34,7 @@ with tab2:
     st.image(image2, caption='Distribution of Potential Competitors in Cape Town', width=None)
 
 with tab3:
-    st.subheader("The Process")
+    st.subheader("The Roadmap")
+
+    image3 = Image.open('27_roadmap.png')
+    st.image(image2, caption='Distribution of Potential Competitors in Cape Town', width=None)
