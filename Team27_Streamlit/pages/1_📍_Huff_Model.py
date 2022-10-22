@@ -124,9 +124,9 @@ with col3:
                 popup='Third Location',
                 icon=folium.Icon(color='green', icon='crosshairs', prefix='fa')
                 ).add_to(m)
-wards = gpd.read_file('https://github.com/JayRolla/Team-27-/raw/main/Wards.zip')
+wards = gpd.read_file('https://interns-t27-2201-retail-trade-area-analysis.s3.eu-west-1.amazonaws.com/Data/Wards.zip')
 #The population data is in csv file and contains data on population and income
-population = pd.read_csv('https://raw.githubusercontent.com/JayRolla/Team-27-/main/Popdata.csv')
+population = pd.read_csv('https://interns-t27-2201-retail-trade-area-analysis.s3.eu-west-1.amazonaws.com/Data/Popdata.csv')
 type_dict = {'WARD_NAME': 'int64'}
 type_dict1 = {'WARD_NAME': 'int64',
              'Population_Density (People/Sq Km)': 'float64'}
