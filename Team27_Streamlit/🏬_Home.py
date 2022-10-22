@@ -26,7 +26,7 @@ with tab1:
          the location of interest is Cape Town.")
     st.write("The project offers insight on the viability of opening a retail outlet in different locations within Cape Town.")
 
-    image = Image.open('capetown_.png')
+    image = Image.open('/home/explore-student/t27-s3bucket/Data/capetown_.png')
     st.image(image, caption='An Aerial View of Cape Town Business District', width=None)
 
 with tab2:
@@ -37,11 +37,11 @@ with tab2:
         potential locations.")
     st.write("3. Trade area analysis will assess in advance the effects of trade area overlapping.")
 
-    image2 = Image.open('cape.png')
+    image2 = Image.open('/home/explore-student/t27-s3bucket/Data/cape.png')
     st.image(image2, caption='Distribution of Potential Competitors in Cape Town', width=None)
 
 with tab3:
     st.subheader("The Roadmap")
 
-    image3 = Image.open('27_roadmap.png')
+    image3 = Image.open('/home/explore-student/t27-s3bucket/Data/27_roadmap.png')
     st.image(image3, caption='The project roadmap', width=None)
