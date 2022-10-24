@@ -146,9 +146,9 @@ def nll(x, y, z):
         prod2 = 1
     return [prod, prod1, prod2]
 product_off = nll(prod, prod1, prod2)
-wards = gpd.read_file('/home/explore-student/t27-s3bucket/Data/Wards.zip')
+wards = gpd.read_file('/home/explore-student/s3-drive/Data/Wards.zip')
 #The population data is in csv file and contains data on population and income
-population = pd.read_csv('/home/explore-student/t27-s3bucket/Data/Popdata.csv')
+population = pd.read_csv('/home/explore-student/s3-drive/Data/Popdata.csv')
 type_dict = {'WARD_NAME': 'int64'}
 type_dict1 = {'WARD_NAME': 'int64',
              'Population_Density (People/Sq Km)': 'float64'}
