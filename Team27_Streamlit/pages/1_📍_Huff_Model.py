@@ -51,10 +51,9 @@ def buff(res):
     params_iso = {'profile': 'driving-car', 'range': [900], 'locations' : [point[::-1]]}
     r = ors.isochrones(**params_iso)
     folium.features.GeoJson(r).add_to(m)
-col1, col2, col3 = st.columns(3)
-
+st.subheader('First Location')
+col1, col2 = st.columns(2, gap="medium")
 with col1:
-    st.subheader('First Location')
     address = st.text_input('Enter an address.', key = 1)
     if address:
         results = geocode(address)
@@ -77,7 +76,10 @@ with col1:
                 icon=folium.Icon(color='green', icon='crosshairs', prefix='fa')
                 ).add_to(m)
 with col2:
-    st.subheader('Second Location')
+    prod = st.number_input('Range of product offerings: First location', 1, 5, value = 1, key = 7)
+st.subheader('Second Location')
+col3, col4 = st.columns(2, gap="medium")
+with col3:
     address1 = st.text_input('Enter an address.', key = 2)
     if address1:
         results1 = geocode(address1)
@@ -100,8 +102,11 @@ with col2:
                 popup='Second Location',
                 icon=folium.Icon(color='green', icon='crosshairs', prefix='fa')
                 ).add_to(m)
-with col3:
-    st.subheader('Third Location')
+with col4:
+    prod1 = st.number_input('Range of product offerings: Second location', 1, 5, value = 1, key = 8)
+st.subheader('Third Location')
+col5, col6 = st.columns(2, gap="medium")
+with col5:
     address2 = st.text_input('Enter an address.', key = 3)
     if address2:
         results2 = geocode(address2)
@@ -124,6 +129,23 @@ with col3:
                 popup='Third Location',
                 icon=folium.Icon(color='green', icon='crosshairs', prefix='fa')
                 ).add_to(m)
+with col6:
+    prod2 = st.number_input('Range of product offerings: Third Location', 1, 5, value = 1, key = 9)
+def nll(x, y, z):
+    if x:
+        prod = x
+    else:
+        prod = 1
+    if y:
+        prod1 = y
+    else:
+        prod1 = 1
+    if z:
+        prod2 = z
+    else:
+        prod2 = 1
+    return [prod, prod1, prod2]
+product_off = nll(prod, prod1, prod2)
 wards = gpd.read_file('/home/explore-student/t27-s3bucket/Data/Wards.zip')
 #The population data is in csv file and contains data on population and income
 population = pd.read_csv('/home/explore-student/t27-s3bucket/Data/Popdata.csv')
@@ -223,18 +245,20 @@ def huff():
     values = getrows(values)
     locations_df = pd.DataFrame(values, columns = cats, index = names)
     def negative(df):
-      lis = df['Competitors']
-      lis = lis * -1
-      df['Competitors'] = lis
-      lis1 = df.sum(axis='columns').values.tolist()
-      xmin = min(lis1)
-      xmax=max(lis1)
-      for i, x in enumerate(lis1):
-        lis1[i] = (x-xmin) / (xmax-xmin)
-      lis1 = [x + 1 for x in lis1]
-      df['Attractiveness']  = lis1
-      return df
-
+        df['offerings'] = product_off
+        df = (df-df.min())/(df.max()-df.min())
+        lis = df['Competitors']
+        lis = lis * -1
+        df['Competitors'] = lis
+        lis1 = df.sum(axis='columns').values.tolist()
+        xmin = min(lis1)
+        xmax=max(lis1)
+        for i, x in enumerate(lis1):
+            lis1[i] = (x-xmin) / (xmax-xmin)
+        lis1 = [x + 1 for x in lis1]
+        df['Attractiveness']  = lis1
+        return df
+    global scaled
     scaled = negative(locations_df)
     cordinates1 = list(loca1) + cor_list
     cordinates2 = list(loca2) + cor_list
