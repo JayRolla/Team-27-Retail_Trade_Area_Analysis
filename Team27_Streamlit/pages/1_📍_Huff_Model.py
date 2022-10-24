@@ -307,12 +307,6 @@ def huff():
     indices1 = exp_locations.keys()
     global expected
     expected = pd.DataFrame(exp_locations)
-    global bins
-    bins = list(expected['first location'].quantile([0, 0.25, 0.5, 0.75, 1]))
-    global bins1
-    bins1 = list(expected['second location'].quantile([0, 0.25, 0.5, 0.75, 1]))
-    global bins2
-    bins2 = list(expected['third location'].quantile([0, 0.25, 0.5, 0.75, 1]))
     #expected  = expected.set_index('WARD_NAME')
     expected['geometry'] = o2
     expected = gpd.GeoDataFrame(expected)
@@ -321,9 +315,9 @@ def huff():
     stores_df = pd.Series(exp_store).to_frame('Expected Annual Sales')
     return stores_df
 stores_df = huff()
-bins = [0.5, 0.75, 0.9, 1]
-bins1 = [0.5, 0.75, 0.9, 1]
-bins2 = [0.5, 0.75, 0.9, 1]
+bins = [0, 0.5, 0.75, 1]
+bins1 = [0, 0.5, 0.75, 1]
+bins2 = [0, 0.5, 0.75, 1]
 
 map2 = folium.Map(location=([-33.9289920, 18.4173960]), zoom_start=10)
 
