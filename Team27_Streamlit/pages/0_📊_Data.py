@@ -17,8 +17,8 @@ st.sidebar.header("Data Insights")
 st.sidebar.write("The census data used for determining the viable trade area for Molapo Stores include the population distribution per ward and the average household income per ward")
 
 #Importing the dataframes
-pop= pd.read_csv("/home/explore-student/t27-s3bucket/Data/capetown_population.csv")
-hhs= pd.read_csv("/home/explore-student/t27-s3bucket/Data/capetown_households.csv")
+pop= pd.read_csv("/home/explore-student/s3-drive/Data/capetown_population.csv")
+hhs= pd.read_csv("/home/explore-student/s3-drive/Data/capetown_households.csv")
 
 st.subheader("1. The Datasets")
 
