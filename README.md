@@ -19,10 +19,11 @@ The analysis was conducted during an internship at Explore AI.
 
 Contributors
 * [Oluwasola Osatuyi](https://github.com/oluwasolaosatuyi)
-* [Molapo Kgarose](https://github.com/molapokg)
-* [James Beta](https://github.com/jamesbeta)
-* [Joshua Akwada](https://github.com/joshuaakwada)
-* [Samuel Njoki](https://github.com/samuelnjoki)
+* [Molapo Kgarose](https://github.com/JayRolla)
+* [James Beta](https://github.com/James-Beta)
+* [Joshua Akwada](https://github.com/JKTAkwada)
+* [Samuel Njoki](https://github.com/SamWachira)
+* * [Micheal Mwena](https://github.com/MichaelGeremy)
 
 Conclusion
 The retail trade area analysis is a valuable tool for businesses that are considering opening a new supermarket. The analysis can help businesses to identify areas with high potential for success and to avoid areas with too much competition.
