@@ -13,7 +13,7 @@ Collect data on the location of all supermarkets in Cape Town.
 Estimate the travel time between each supermarket and every point in Cape Town, taking into account population density, taxi and travel routes data.
 Define the trade area of each supermarket as the area within a certain travel time.
 Analyze the trade areas of the supermarkets to identify areas with high competition and areas with potential for new supermarkets.
-The analysis found that the supermarket industry in Cape Town is highly competitive. The average supermarket has a trade area of about 5 kilometers. However, there are some areas with high competition, such as the city center and the suburbs of Sea Point and Green Point. There are also some areas with potential for new supermarkets, such as the suburbs of Khayelitsha and Mitchells Plain.
+. However, there are some areas with high competition, such as the city center and the suburbs of Sea Point and Green Point. There are also some areas with potential for new supermarkets
 
 The analysis was conducted during an internship at Explore AI.
 
@@ -23,7 +23,7 @@ Contributors
 * [James Beta](https://github.com/James-Beta)
 * [Joshua Akwada](https://github.com/JKTAkwada)
 * [Samuel Njoki](https://github.com/SamWachira)
-* * [Micheal Mwena](https://github.com/MichaelGeremy)
+*  [Micheal Mwena](https://github.com/MichaelGeremy)
 
 Conclusion
 The retail trade area analysis is a valuable tool for businesses that are considering opening a new supermarket. The analysis can help businesses to identify areas with high potential for success and to avoid areas with too much competition.
