@@ -18,12 +18,11 @@ The analysis found that the supermarket industry in Cape Town is highly competit
 The analysis was conducted during an internship at Explore AI.
 
 Contributors
-Oluwasola Osatuyi
-Molapo Kgarose
-James Beta
-Joshua Akwada
-Samuel Njoki
-
+* [Oluwasola Osatuyi](https://github.com/oluwasolaosatuyi)
+* [Molapo Kgarose](https://github.com/molapokg)
+* [James Beta](https://github.com/jamesbeta)
+* [Joshua Akwada](https://github.com/joshuaakwada)
+* [Samuel Njoki](https://github.com/samuelnjoki)
 
 Conclusion
 The retail trade area analysis is a valuable tool for businesses that are considering opening a new supermarket. The analysis can help businesses to identify areas with high potential for success and to avoid areas with too much competition.
